@@ -1,0 +1,29 @@
+[project]
+name = "stupid-baseline-opdracht"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    { name = "Your Name", email = "your.email@example.com" }
+]
+dependencies = [
+    "pandas>=3.0.2",
+    # Add dependencies here, e.g.:
+    # "requests>=2.31.0",
+    # "python-dotenv>=1.0.0",
+    "pip>=26.0.1",
+]
+ 
+[project.optional-dependencies]
+# Development dependencies - install with: uv add --dev <package>
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+]
+ 
+[tool.uv]
+# uv-specific configuration goes here
+ 

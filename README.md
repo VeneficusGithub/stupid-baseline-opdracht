@@ -20,7 +20,7 @@ Run bash command:
 ```bash
 uv sync
 ```
-Run powershell command:
+Also run powershell command:
 ```powershell
 .venv\Scripts\activate
 ```

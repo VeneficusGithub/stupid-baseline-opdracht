@@ -119,18 +119,10 @@ def write_data():
     ]
 
     rows = []
-    defect_indices = []
 
     for row_index in range(ROW_COUNT):
         row = assemble_row(fake)
         rows.append(row)
-        if row["is_defect"] == 1:
-            defect_indices.append(row_index)
-
-    blank_count = int(len(defect_indices) * 0.40)
-    blanks_to_apply = set(random.sample(defect_indices, blank_count)) if blank_count > 0 else set()
-    for row_index in blanks_to_apply:
-        rows[row_index]["is_defect"] = ""
 
     with open(OUTPUT_PATH, mode="w", newline="", encoding="utf-8") as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
